@@ -41,7 +41,7 @@ echo "Injecting payload"
 cp -rv sh1mmer-assets mnt/usr/share/sh1mmer-assets
 cp -v sh1mmer-scripts/* mnt/usr/sbin/
 mkdir mnt/usr/local/payloads/
-cp -rv payloads/* mnt/usr/local/payloads/
+cp -rv payloads-mini/* mnt/usr/local/payloads/
 cp -v factory_install.sh mnt/usr/sbin/
 
 sync # this sync should hopefully stop make_dev_ssd from messing up, as it does raw byte manip stuff
