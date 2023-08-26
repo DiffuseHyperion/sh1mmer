@@ -35,7 +35,7 @@ echo "Creating Mountpoint"
 mkdir mnt || :
 
 echo "Mounting ROOT-A"
-mount "${loop}3" mnt
+mount "${loop}p3" mnt
 
 echo "Injecting payload"
 cp -rv sh1mmer-assets mnt/usr/share/sh1mmer-assets
@@ -51,6 +51,6 @@ sleep 2
 echo "Cleaning up..."
 
 sync
-umount "${loop}3"
+umount "${loop}p3"
 
 echo "Done. Have fun!"
