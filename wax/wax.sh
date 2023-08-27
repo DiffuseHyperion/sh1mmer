@@ -92,6 +92,8 @@ echo "Cleaning up..."
 sync
 if umount "${loop}p3" && umount "${loop}p13"; then
     losetup -d ${loop}
+    rm -r mnt
+    rm -r mntarch
 else
     echo "Couldn't safely unmount. Please unmount and detach the loopbacks yourself."
 fi
