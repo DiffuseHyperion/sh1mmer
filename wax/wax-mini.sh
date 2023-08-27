@@ -53,6 +53,7 @@ echo "Cleaning up..."
 sync
 if umount "${loop}p3"; then
     losetup -d ${loop}
+    rm -r mnt
 else
     echo "Couldn't safely unmount. Please unmount and detach the loopbacks yourself."
 fi
